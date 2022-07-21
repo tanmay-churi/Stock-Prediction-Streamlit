@@ -2,7 +2,7 @@
 # coding: utf-8
 
 # In[1]:
-
+pip install yfinance
 
 import streamlit as st
 from datetime import date
