@@ -54,7 +54,7 @@ forecast = m.predict(future)
 st.subheader('Forecast data')
 st.write(forecast.tail())
     
-csv=forecast.to_csv(index=False).encode("utf-8")
+csv=forecast[['ds','yhat']].to_csv(index=False).encode("utf-8")
 st.download_button(
          label="Download data as CSV",
          data=csv,
