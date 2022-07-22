@@ -6,7 +6,7 @@ from prophet import Prophet
 from prophet.plot import plot_plotly
 from plotly import graph_objs as go
 
-st.image("compunnel.png",width=100)
+st.image("compunnel.png",width=200)
 
 st.title('Stock Forecast App')
 
