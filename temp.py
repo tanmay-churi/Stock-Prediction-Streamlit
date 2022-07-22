@@ -6,6 +6,7 @@ from prophet import Prophet
 from prophet.plot import plot_plotly
 from plotly import graph_objs as go
 
+st.image("compunnel.png",width=100)
 
 st.title('Stock Forecast App')
 
@@ -28,7 +29,7 @@ data = load_data(selected_stock)
 data_load_state.text('Loading data... done!')
 
 st.subheader('Raw data')
-st.write(data.tail())
+st.subheader(data.tail())
 
 # Plot raw data
 def plot_raw_data():
