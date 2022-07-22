@@ -54,6 +54,16 @@ forecast = m.predict(future)
 st.subheader('Forecast data')
 st.write(forecast.tail())
     
+csv=forecast.to_csv(index=False).encode("utf-8")
+st.download_button(
+         label="Download data as CSV",
+         data=csv,
+         file_name='forecaste.csv',
+         mime='text/csv',
+         )
+
+
+
 st.subheader(f'Forecast plot for {n_years} years')
 fig1 = plot_plotly(m, forecast)
 st.plotly_chart(fig1)
